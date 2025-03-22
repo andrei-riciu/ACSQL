@@ -1,0 +1,15 @@
+*Acest README contine explicarea rezolvarii taskurilor din tema3.*
+
+## Task1
+
+Functia "citeste_secretariat" realizeaza inregistrarea in memorie a bazei de date citite dintr-un fisier al carui nume este primit ca argument. Este deschis fisierul, iar pentru a aloca dinamic memoria necesara este parcursa informatia pentru a afla dimensiunile pentru fiecare structura. Apoi este inchis fisierul si deschis din nou pentru a putea salva informatia din baza de date, citind linie cu linie si despartind elementele fiecarui element utilizand functia "strtok". La finalul functiei se inchide fisierul si se returneaza variabila de tip secretariat alocata dinamic.
+Functia "adauga_student" realizeaza realocarea memoriei structurii secretariat necesara pentru adaugarea unui student in baza de date, si ulterior ii salveaza informatia;
+Functia "elibereaza_secretariat" realizeaza eliberarea memoriei pentru fiecare dintre variabilele alocate dinamic din structura materii, respectiv eliberarea structurilor alocate dinamic, anume studenti, materii, inrolari, s;
+
+## Task2
+
+In functia main este citita baza de date din fisierul primit ca argument la executabil cu ajutorul functiei "citeste_secretariat". Apoi sunt citite de la tastatura pe rand cele n query-uri. In functie de tipul fiecarui query sunt citite si salvate informatiile pentru prelucrare. In cazul "SELECT" sunt salvate campurile aferente si este utilizata functia "afisare_simpla". Daca este necesara filtrarea sunt salvate informatiile codificate cu ajutorul unor functii auxiliare intr-o structura de tip filtrare si output-ul este afisat cu ajutorul functiei "afisare_filtrare". Am realizat codificarea fiecarui camp si fiecarui operator, fiecare fiindu-i atribuit cate un numar intreg pentru usurarea scrierii celorlalte functii auxiliare. Mai mult, filtrarea a fost realizata si cu ajutorul functiei "conditie" care returneaza 1 in cazul in care un element indeplineste filtrarea si 0 in caz contrar. In cazul "UPDATE" sunt salvate informatiile necesare si este utilizata functia "update" care modifica baza de date dupa conditiile date. In cazul "DELETE" sunt salvate informatiile necesare si sunt sterse din baza de date elementele care indeplinesc conditiile. Mai mult, in cazul query-urilor "UPDATE" si "DELETE" sunt actualizate campurile care pot fi influentate prin aceste operatii.
+
+## Task3
+
+In functia "cripteaza_studenti" este calculata marimea fiecarui block de informatie din structura studenti. Apoi, prin functia "split_into_blocks_and_pad" este realizata copierea intr-un char** a informatiei din studenti, dupa modelul cerut in 4 parti egale, adaugand si padding daca este necesar. Functia XOR realizeaza operatia "^" bit pe bit intre doua variabile char*, multiplicand-o pe cea de a2a in cazul in care lungimea sa este mai mica. Functia P_BOX realizeaza permutarea bitilor cu ajutorul functiei bijective date. Cu ajutorul functiilor enumerate anterior este efectuata criptarea "CBC" asupra vectorului studenti si este scris rezultatul in fisierul de output al carui nume a fost primit ca parametru.
