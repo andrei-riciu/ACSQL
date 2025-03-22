@@ -1,4 +1,5 @@
-*Acest README contine explicarea rezolvarii taskurilor din tema3.*
+Acest proiect implementeaza in limbajul C functionalitati din SQL cu ajutorul structurilor si gestioneaza o baza de date cu informatii despre studentii unei facultati.
+Cerintele pentru fiecare task pot fi gasite aici: https://ocw.cs.pub.ro/courses/programare/teme_2024/tema3_2024_cbd
 
 ## Task1
 
